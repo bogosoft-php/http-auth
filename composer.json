@@ -1,0 +1,26 @@
+{
+  "name": "bogosoft/http-auth",
+  "description": "A library for PSR-7 and PSR-15 compliant authentication middleware.",
+  "autoload": {
+    "psr-4": {
+      "Bogosoft\\Http\\Auth\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bogosoft\\Http\\Auth\\Tests\\": "tests/"
+    }
+  },
+  "license": "MIT",
+  "require": {
+    "bogosoft/identity": "^1.0",
+    "php": ">=7.4",
+    "psr/http-factory": "^1.0",
+    "psr/http-message": "^1.0",
+    "psr/http-server-middleware": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.4",
+    "guzzlehttp/psr7": "^1.7"
+  }
+}
