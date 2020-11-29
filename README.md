@@ -29,17 +29,17 @@ with the following responsibilities:
   
 ### Interfaces
 
-|Name|Purpose|Link|
-|----|-------|----|
-|`IAuthenticator`|Derives a security context (`IPrincipal`) from an HTTP request.|[Link](src/IAuthenticator.php)|
-|`IPrincipalHandler`|Handles a derived security context and allows for HTTP request modification.|[Link](src/IPrincipalHandler.php)|
+|Name|Purpose|
+|----|-------|
+|[`IAuthenticator`](src/IAuthenticator.php)|Derives a security context (`IPrincipal`) from an HTTP request.|
+|[`IPrincipalHandler`](src/IPrincipalHandler.php)|Handles a derived security context and allows for HTTP request modification.|
 
 ### Implementations
 
-|Name|Interface|Details|Link|
-|----|---------|-------|----|
-|`CompositeAuthenticator`|`IAuthenticator`|Allows multiple `IAuthenticator` objects to behave as one.|[Link](src/CompositeAuthenticator.php)||
-|`DelegatedAuthenticator`|`IAuthenticator`|Turns a `callable` object in an `IAuthenticator` interface.|[Link](src/DelegatedAuthenticator.php)||
-|`AuthenticationMiddleware`|`MiddlewareInterface`|An authenticating middleware component.|[Link](src/AuthenticationMiddleware.php)||
-|`AttributePrincipalHandler`|`IPrincipalHandler`|Stores the derived `IPrincipal` object into a mutated HTTP request as an attribute.|[Link](src/AttributePrincipalHandler.php)|
-|`DelegatedPrincipalHandler`|`IPrincipalHandler`|Turns a `callable` object into a `IPrincipalHandler`.|[Link](src/DelegatedPrincipalHandler.php)|
+|Name|Interface|Details|
+|----|---------|-------|
+|[`CompositeAuthenticator`](src/CompositeAuthenticator.php)|`IAuthenticator`|Allows multiple `IAuthenticator` objects to behave as one.|
+|[`DelegatedAuthenticator`](src/DelegatedAuthenticator.php)|`IAuthenticator`|Turns a `callable` object in an `IAuthenticator` interface.|
+|[`AuthenticationMiddleware`](src/AuthenticationMiddleware.php)|`MiddlewareInterface`|An authenticating middleware component.|
+|[`AttributePrincipalHandler`](src/AttributePrincipalHandler.php)|`IPrincipalHandler`|Stores the derived `IPrincipal` object into a mutated HTTP request as an attribute.|
+|[`DelegatedPrincipalHandler`](src/DelegatedPrincipalHandler.php)|`IPrincipalHandler`|Turns a `callable` object into a `IPrincipalHandler`.|
